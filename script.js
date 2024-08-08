@@ -37,7 +37,6 @@ menu.addEventListener("click" , function(event){
     if(parentButton){
         const name = parentButton.getAttribute("data-name")
         const price = parseFloat(parentButton.getAttribute("data-price"))
-
       addToCart(name, price)
     }
 
@@ -175,7 +174,7 @@ const cartItems = cart.map((item)=>{
 }).join("")
 
 const message = encodeURIComponent(cartItems)
-const phone = "61996412842"
+const phone = "61998350065"
 
 window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank" )
 
@@ -184,11 +183,11 @@ updateCartModal();
 
 })
 
-// Verificar hora e manipular o card horario
+//Verificar hora e manipular o card horario
 function checkRestaurantOpen(){
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 18 && hora < 22; 
+    return hora >= 8 && hora < 22; 
 }
 
 const spanItem = document.getElementById("date-span")
